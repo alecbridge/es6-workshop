@@ -4,22 +4,19 @@ describe('Block Scoped Variables', () => {
 
   it.skip('can be used in place of `var`', () => {
 
-    // Declare 'bandName' using 'let'
+    let bandName = 'Queen';
 
-    // Declare 'isBestBand' using 'let'
-
+    let isBestBand = 'true';
 
     expect(bandName).to.equal('Queen')
     expect(isBestBand).to.be.true
   })
-
 
   it.skip('can modify the value of a `let` variable', () => {
 
     // Delcare 'releaseName' using 'let', setting the value to 'ES6'
 
     // Change value of 'releaseName' to be `ES2015`, the new name for ES6
-
 
     expect(releaseName).to.equal('ES2015')
   })
@@ -34,7 +31,6 @@ describe('Block Scoped Variables', () => {
     expect(releaseName).to.equal('ES6')
   })
 
-
   it.skip('is trapped inside of an `if` statement', () => {
 
     if (true) {
@@ -44,7 +40,6 @@ describe('Block Scoped Variables', () => {
 
     expect(()=> console.log(b)).to.throw('b is not defined')
   })
-
 
   it.skip('prevents loop counters from hoisting', () => {
 
@@ -58,7 +53,6 @@ describe('Block Scoped Variables', () => {
 
     expect(doLoop).to.throw('i is not defined')
   })
-
 
   it.skip('means that we can start using block statements', () => {
 
