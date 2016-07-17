@@ -1,7 +1,7 @@
 import {expect} from 'chai'
 
 describe(`Symbols`, () => {
-  it.skip(`should ensure a variable is unique reference`, () => {
+  it(`should ensure a variable is unique reference`, () => {
 
     // The sky's blue and the ocean's blue are both, well, blue.
     // But the shade of blue changes over time based on light and
@@ -20,8 +20,8 @@ describe(`Symbols`, () => {
     // const SKY_COLOR_BLUE = 'BLUE';
     // const OCEAN_COLOR_BLUE = 'BLUE';
 
-
-
+    const SKY_COLOR_BLUE = Symbol()
+    const OCEAN_COLOR_BLUE = Symbol()
 
 
     expect(SKY_COLOR_BLUE).to.not.equal(OCEAN_COLOR_BLUE)
@@ -30,21 +30,15 @@ describe(`Symbols`, () => {
 
   })
 
-  it.skip(`should help determine if a singleton has already been declared`, () => {
+  it(`should help determine if a singleton has already been declared`, () => {
 
     // Singleton functions should return the same instance each time
     // they are called.
 
-    // Create a symbol called toRuleThemAll with the description of:
-    // One ring, to rule them all.
+    const toRuleThemAll = Symbol('One ring, to rule them all.')
 
-
-
-
-    // Create 2 variables: myRing and myPrecious
-    // Both should be have their values set to OneRing()
-
-
+    var myRing = OneRing()
+    var myPrecious = OneRing()
 
 
     function OneRing() {

@@ -1,44 +1,44 @@
 import {expect} from 'chai'
 
 describe(`Promises`, () => {
-  it.skip(`should resolve`, (done) => {
+  it(`should resolve`, (done) => {
     pickApple('ripe')
       .then((result) => {
-        expect(result).to.equal(/*ENTER GUESS HERE*/)
+        expect(result).to.equal('ripe apple')
         done()
       }, (result) => {
-        expect(result).to.equal(/*ENTER GUESS HERE*/)
+        expect(result).to.equal(undefined)
         done()
       })
       .catch((error) => {
-        expect(error).to.equal(/* ENTER GUESS HERE */)
+        expect(error).to.equal(undefined)
         done()
       })
   })
 
-  it.skip(`should reject`, (done) => {
+  it(`should reject`, (done) => {
     pickApple('unripe')
       .then((result) => {
-        expect(result).to.equal(/*ENTER GUESS HERE*/)
+        expect(result).to.equal(undefined)
         done()
       }, (result) => {
-        expect(result).to.equal(/* ENTER GUESS HERE */)
+        expect(result).to.equal('unripe apple')
         done()
       })
       .catch((error) => {
-        expect(error).to.equal(/* ENTER GUESS HERE */)
+        expect(error).to.equal(undefined)
         done()
       })
   })
 
-  it.skip(`errors can be caught`, (done) => {
+  it(`errors can be caught`, (done) => {
     return pickApple()
       .then((result) => {
-        expect(result).to.equal(/*ENTER GUESS HERE*/)
+        expect(result).to.equal(undefined)
         done()
       })
       .catch((error) => {
-        expect(error.message).to.equal(/* ENTER GUESS HERE*/)
+        expect(error.message).to.equal('out of apples')
         done()
       })
   })
